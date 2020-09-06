@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-
+import 'newlayout.dart';
+import 'userinfo.dart';
 class OnboardingScreen extends StatefulWidget {
   @override
   _OnboardingScreenState createState() => _OnboardingScreenState();
@@ -74,13 +75,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Connect people\naround the world',
-                              style: GoogleFonts.roboto(color: Colors.grey),
+                              'Welcome To Merit Calculator By PrepareHOW',
+                              style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontSize: 20,fontWeight: FontWeight.bold),
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
-                              style: GoogleFonts.roboto(color: Colors.grey),
+                              'This app helps student to evaluate their entry test merit.',
+                              style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontSize: 16),
                             ),
                           ],
                         ),
@@ -101,13 +102,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Live your life smarter\nwith us!',
-                              style: GoogleFonts.roboto(),
+                              'Procedure',
+                              style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontSize: 20,fontWeight: FontWeight.bold),
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
-                              style: GoogleFonts.roboto(),
+                              'You need to select test type and enter required marks, rest is handeled by the app',
+                              style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontSize: 16),
                             ),
                           ],
                         ),
@@ -120,7 +121,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             Center(
                               child: Image(
                                 image: AssetImage(
-                                  'assets/images/we3.png',
+                                  'assets/images/t3.png',
                                 ),
                                 height: 300.0,
                                 width: 300.0,
@@ -128,13 +129,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Get a new experience\nof imagination',
-                              style: GoogleFonts.roboto(),
+                              'Lets Begin!',
+                              style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontSize: 20,fontWeight: FontWeight.bold),
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
-                              style: GoogleFonts.roboto(),
+                              'We hope that you find this app helpful.It is an honor for us to help students like you, please visit www.preparehow.com for more information. Best of Luck!',
+                              style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontSize: 16),
                             ),
                           ],
                         ),
@@ -175,7 +176,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 Container(
                   alignment: Alignment.center,
                   child: FlatButton(
-                    onPressed: () => print('Skip'),
+                    onPressed: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => UserInfo(),settings: RouteSettings(name: '/home'))),
                     child: Text(
                       'Skip',
                       style: GoogleFonts.roboto(color: Color(0xff73924F),fontSize: 20,fontWeight: FontWeight.bold)
@@ -193,7 +194,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         width: double.infinity,
         color: Colors.white,
         child: GestureDetector(
-          onTap: () => print('Get started'),
+          onTap: () => Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => UserInfo(),settings: RouteSettings(name: '/home'))),
           child: Center(
             child: Padding(
               padding: EdgeInsets.only(bottom: 30.0),

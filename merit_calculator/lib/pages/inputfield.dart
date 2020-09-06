@@ -22,69 +22,96 @@ class _NumericInputState extends State<NumericInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-              Text(
-                widget.label,
-                style: GoogleFonts.roboto(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 15),
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: 4,top: 4),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+                Text(
+                  widget.label,
+                  style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontWeight: FontWeight.bold,fontSize: 15),
+                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 2),
+                    child: Container(
+                      width: 100,
+                      child: TextField(
+                        controller: widget.con1,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          hintText: widget.hint1,
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(3),
+                            borderSide: BorderSide(
+                                color: Colors.green
+                            ),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(3),
+                            borderSide: BorderSide(
+                              color: Colors.black
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 2),
+                    child: Container(
+                      width: 100,
+                      child: TextField(
+                        controller: widget.con2,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(3),
+                            borderSide: BorderSide(
+                                color: Colors.green
+                            ),
+                          ),
+                          hintText: widget.hint2,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(3),
+                            borderSide: BorderSide(
+                                color: Colors.black
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 100,
+                    child: TextField(
+                      enabled: widget.editable,
+                      controller: widget.con3,
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(3),
+                          borderSide: BorderSide(
+                              color: Colors.green
+                          ),
+                        ),
+                        hintText: widget.hint3,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(3),
+                          borderSide: BorderSide(
+                              color: Colors.black
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 100,
-                  child: TextField(
-                    controller: widget.con1,
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                      hintText: widget.hint1,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5),
-                        borderSide: BorderSide(
-                          color: Colors.green
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 100,
-                  child: TextField(
-                    controller: widget.con2,
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                      hintText: widget.hint2,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5),
-                        borderSide: BorderSide(
-                            color: Colors.green
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 100,
-                  child: TextField(
-                    enabled: widget.editable,
-                    controller: widget.con3,
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                      hintText: widget.hint3,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5),
-                        borderSide: BorderSide(
-                            color: Colors.green
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ],
+            ],
+          ),
         ),
     );
   }
@@ -102,12 +129,13 @@ class _SimpleInputState extends State<SimpleInput> {
     return Column(
       children: [
          Text(
-            "Enter test name",
-           style: GoogleFonts.roboto(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 15),
+            "Enter Test Name",
+           style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontWeight: FontWeight.bold,fontSize: 15),
+
           ),
         Container(
           alignment: Alignment.topCenter,
-          width: 200,
+          width: 300,
           child: TextField(
             controller: g,
             onChanged: (TEST){
@@ -115,11 +143,17 @@ class _SimpleInputState extends State<SimpleInput> {
             },
             keyboardType: TextInputType.text,
             decoration: InputDecoration(
-              hintText: "Test name",
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(3),
                 borderSide: BorderSide(
                     color: Colors.green
+                ),
+              ),
+              hintText: "Test name",
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(3),
+                borderSide: BorderSide(
+                    color: Colors.black
                 ),
               ),
             ),

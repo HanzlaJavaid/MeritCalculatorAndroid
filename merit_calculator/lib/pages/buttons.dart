@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:merit_calculator/main.dart';
 import 'newlayout.dart';
+import 'info.dart';
 class Evaluate extends StatelessWidget {
   Function() eval;
   Evaluate({this.eval});
@@ -15,7 +16,7 @@ class Evaluate extends StatelessWidget {
         onPressed: (){
           eval();
         },
-        color: Colors.green,
+        color:  Color(0xff73924F),
         child: Text(
           "EVALUATE",
             style: GoogleFonts.roboto(color: Colors.white,fontSize: 17,fontWeight: FontWeight.bold)
@@ -75,7 +76,7 @@ class _NextScreenState extends State<NextScreen> {
               _showDialog();
           }
         },
-        color: Colors.green,
+        color: Color(0xff73924F),
         child: Text(
             "CONTINUE",
             style: GoogleFonts.roboto(color: Colors.white,fontSize: 17,fontWeight: FontWeight.bold)
@@ -111,6 +112,20 @@ class BackScreen extends StatelessWidget {
     );
   }
 }
+class About extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: FlatButton(
+        child: Icon(Icons.info , size: 60,color: Color(0xff73924F),),
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (_) => infoShow()));
+        },
+      )
+    );
+  }
+}
+
 class EditandRecalculate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -124,12 +139,12 @@ class EditandRecalculate extends StatelessWidget {
         color: Colors.white,
         child: Text(
             "EDIT AND RECALCULATE ",
-            style: GoogleFonts.roboto(color: Colors.green,fontSize: 15,fontWeight: FontWeight.bold),
+            style: GoogleFonts.roboto(color:  Color(0xff73924F),fontSize: 15,fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
-          side: BorderSide(color: Colors.green)
+          side: BorderSide(color: Color(0xff73924F))
         ),
       ),
     );
@@ -152,7 +167,7 @@ class Recalculate extends StatelessWidget {
           g.text = '';
           Navigator.popUntil(context, ModalRoute.withName('/home'));
         },
-        color: Colors.green,
+        color:  Color(0xff73924F),
         child: Text(
           "CALCULATE WITH NEW DATA ",
           style: GoogleFonts.roboto(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),

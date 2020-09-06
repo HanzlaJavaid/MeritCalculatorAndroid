@@ -224,6 +224,7 @@ class _NewLayOutState extends State<NewLayOut> {
   }
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: About(),
       backgroundColor: Colors.white,
         body: Container(
           alignment: Alignment.topCenter,
@@ -238,7 +239,7 @@ class _NewLayOutState extends State<NewLayOut> {
                     flex: 1,
                     child: Text(
                       "Provide The Following Details",
-                      style: GoogleFonts.roboto(color: Colors.green,fontWeight: FontWeight.bold,fontSize: 25) ,
+                      style: GoogleFonts.roboto(color:  Color(0xff73924F),fontWeight: FontWeight.bold,fontSize: 25) ,
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -250,7 +251,7 @@ class _NewLayOutState extends State<NewLayOut> {
                         children: [
                           Text(
                             "Test Type",
-                            style: GoogleFonts.roboto(color: Colors.grey,fontWeight: FontWeight.bold,fontSize: 15),
+                            style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontWeight: FontWeight.bold,fontSize: 15),
                           ),
                           Container(
                             alignment: Alignment.center,

@@ -18,14 +18,14 @@ class SCORESHOW extends StatelessWidget {
               Container(
                 width: 200,
                 child: Divider(
-                  color: Colors.green[200],
+                  color:  Color(0xff73924F),
                   height: 5,
                   thickness: 1.5,
                 ),
               ),
               Text(
                 HEADING,
-                style: GoogleFonts.roboto(color: Colors.green,fontWeight: FontWeight.bold,fontSize: 12),
+                style: GoogleFonts.roboto(color:  Color(0xff73924F),fontWeight: FontWeight.bold,fontSize: 12),
                 textAlign: TextAlign.center,
               ),
               Padding(

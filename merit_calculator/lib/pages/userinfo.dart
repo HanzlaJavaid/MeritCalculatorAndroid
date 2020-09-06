@@ -21,7 +21,7 @@ class _UserInfoState extends State<UserInfo> {
           flex: 1,
           child: Text(
             "Please enter the following",
-            style: GoogleFonts.roboto(color: Colors.green,fontWeight: FontWeight.bold,fontSize: 25) ,
+            style: GoogleFonts.roboto(color: Color(0xff73924F),fontWeight: FontWeight.bold,fontSize: 25) ,
             textAlign: TextAlign.center,
           ),
           ),
@@ -61,9 +61,9 @@ class _UserInfoState extends State<UserInfo> {
                     decoration: InputDecoration(
                       hintText: "Your mobile number here",
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5),
+                        borderRadius: BorderRadius.circular(3),
                         borderSide: BorderSide(
-                            color: Colors.green
+                            color: Colors.black
                         ),
                       ),
                     ),

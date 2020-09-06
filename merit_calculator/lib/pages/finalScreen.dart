@@ -11,6 +11,7 @@ class resultScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: About(),
       body: Center(
         child: Container(
           child: Padding(
@@ -23,7 +24,7 @@ class resultScreen extends StatelessWidget {
                 children: [
                   Text(
                     "Your Aggregate",
-                    style: GoogleFonts.roboto(color: Colors.green,fontWeight: FontWeight.bold,fontSize: 40),
+                    style: GoogleFonts.roboto(color:  Color(0xff73924F),fontWeight: FontWeight.bold,fontSize: 40),
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(height: 15,),
@@ -39,7 +40,7 @@ class resultScreen extends StatelessWidget {
                     ),
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.green[500],width: 1, style: BorderStyle.solid),
-                      color: Colors.green,
+                      color:  Color(0xff73924F),
                     ),
                   ),
                   SizedBox(height: 10,),
@@ -50,7 +51,7 @@ class resultScreen extends StatelessWidget {
                   SizedBox(height: 10,),
                   EditandRecalculate(),
                   SizedBox(height: 10,),
-                  Recalculate()
+                  Recalculate(),
                 ],
 
               ),
