@@ -75,12 +75,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             SizedBox(height: 30.0),
                             Text(
                               'Connect people\naround the world',
-                              style: GoogleFonts.roboto(),
+                              style: GoogleFonts.roboto(color: Colors.grey),
                             ),
                             SizedBox(height: 15.0),
                             Text(
                               'Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
-                              style: GoogleFonts.roboto(),
+                              style: GoogleFonts.roboto(color: Colors.grey),
                             ),
                           ],
                         ),
@@ -120,7 +120,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             Center(
                               child: Image(
                                 image: AssetImage(
-                                  'assets/images/logo.png',
+                                  'assets/images/we3.png',
                                 ),
                                 height: 300.0,
                                 width: 300.0,
@@ -162,7 +162,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     color: Color(0xff73924F),
                     child: Text(
                       "NEXT ",
-                      style: GoogleFonts.roboto(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),
+                      style: GoogleFonts.roboto(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
                     shape: RoundedRectangleBorder(
@@ -178,10 +178,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     onPressed: () => print('Skip'),
                     child: Text(
                       'Skip',
-                      style: TextStyle(
-                        color: Color(0xff73924F),
-                        fontSize: 20.0,
-                      ),
+                      style: GoogleFonts.roboto(color: Color(0xff73924F),fontSize: 20,fontWeight: FontWeight.bold)
                     ),
                   ),
                 ),
@@ -202,11 +199,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               padding: EdgeInsets.only(bottom: 30.0),
               child: Text(
                 'Get started',
-                style: TextStyle(
-                  color: Color(0xFF5B16D0),
-                  fontSize: 20.0,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: GoogleFonts.roboto(color: Color(0xff73924F),fontSize: 25,fontWeight: FontWeight.bold),
               ),
             ),
           ),
