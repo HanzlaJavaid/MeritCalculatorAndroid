@@ -6,6 +6,7 @@ import 'sandbox.dart';
 import 'newlayout.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'userinfo.dart';
+import 'slider.dart';
 class loadingscreen extends StatefulWidget {
   @override
   _loadingscreen createState() => _loadingscreen();
@@ -17,7 +18,7 @@ class _loadingscreen extends State<loadingscreen> {
     super.initState();
     // here is the logic 
     Future.delayed(Duration(seconds: 2)).then((__) {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => UserInfo(),settings: RouteSettings(name: '/home')));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => OnboardingScreen(),settings: RouteSettings(name: '/home')));
     });
   }
 
