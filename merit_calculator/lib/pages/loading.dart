@@ -7,19 +7,42 @@ import 'newlayout.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'userinfo.dart';
 import 'slider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 class loadingscreen extends StatefulWidget {
   @override
   _loadingscreen createState() => _loadingscreen();
 }
 
 class _loadingscreen extends State<loadingscreen> {
+  startTime() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool firstTime = prefs.getBool('first_time');
+
+    var _duration = new Duration(seconds: 1);
+
+    if (firstTime != null && !firstTime) {// Not first time
+      return new Timer(_duration, navigationPageHome);
+    } else {// First time
+      prefs.setBool('first_time', false);
+      return new Timer(_duration, navigationPageWel);
+    }
+  }
+
+  void navigationPageHome() {
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => NewLayOut(),settings: RouteSettings(name: '/home')));
+  }
+
+  void navigationPageWel() {
+
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => OnboardingScreen(),settings: RouteSettings(name: '/home')));
+  }
 
   @override
   void initState() {
     super.initState();
-    // here is the logic 
+    // here is the logic
     Future.delayed(Duration(seconds: 2)).then((__) {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => OnboardingScreen(),settings: RouteSettings(name: '/home')));
+      startTime();
     });
   }
 

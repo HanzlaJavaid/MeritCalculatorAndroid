@@ -66,9 +66,9 @@ class _NewLayOutState extends State<NewLayOut> {
   callback(a,b,d,c) {
     editable1 = c;
     setState(() {
-      e2.text = a;
-      m2.text = b;
-      f2.text = d;
+      e2.text = d;
+      m2.text = a;
+      f2.text = b;
     });
     if(editable1 == false){
         layoutlist.removeRange(0, layoutlist.length);
@@ -111,9 +111,9 @@ class _NewLayOutState extends State<NewLayOut> {
          SizedBox(height: 25,),
         ]);
         setState(() {
-          e2.text = a;
-          m2.text = b;
-          f2.text = d;
+          e2.text = d;
+          m2.text = a;
+          f2.text = b;
         });
     }else{
       Custom("name");
@@ -265,7 +265,7 @@ class _NewLayOutState extends State<NewLayOut> {
                             child: DropdownButtonHideUnderline(
                               child: DropdownButton(
                                 value: dropDownValue,
-                                icon: Container(child: Icon(Icons.arrow_drop_down,size: 30,),padding: EdgeInsets.only(left: 150),),
+                                icon: Container(child: Icon(Icons.arrow_drop_down,size: 30,),padding: EdgeInsets.only(left: 110),),
                                 iconSize: 24,
                                 elevation: 16,
                                 style: GoogleFonts.roboto(color: Colors.black,),
@@ -282,9 +282,9 @@ class _NewLayOutState extends State<NewLayOut> {
                                         z = '30%';
                                       }
                                       break;
-                                      case "MCAT":{
-                                        x = '10%';
-                                        y = '40%';
+                                      case "MDCAT":{
+                                        x = '0%';
+                                        y = '50%';
                                         z = '50%';
                                       }
                                       break;
@@ -294,11 +294,67 @@ class _NewLayOutState extends State<NewLayOut> {
                                         z = '75%';
                                       }
                                       break;
+                                      case "UET":{
+                                        x = '25%';
+                                        y = '45%';
+                                        z = '30%';
+                                      }
+                                      break;
+                                      case "GIKI":{
+                                        x = '5%';
+                                        y = '10%';
+                                        z = '85%';
+                                      }
+                                      break;
+                                      case "ETEA MEDICAL":{
+                                        x = '0%';
+                                        y = '50%';
+                                        z = '50%';
+                                      }
+                                      break;
+                                      case "ETEA ENGINEERING":{
+                                        x = '10%';
+                                        y = '40%';
+                                        z = '50%';
+                                      }
+                                      break;
+                                      case "COMSATS":{
+                                        x = '10%';
+                                        y = '40%';
+                                        z = '50%';
+                                      }
+                                      break;
+                                      case "GCU LAHORE":{
+                                        x = '0%';
+                                        y = '60%';
+                                        z = '40%';
+                                      }
+                                      break;
+                                      case "PUCIT":{
+                                        x = '35%';
+                                        y = '35%';
+                                        z = '30%';
+                                      }
+                                      break;
+                                      case "QAU":{
+                                        x = '30%';
+                                        y = '70%';
+                                        z = '0%';
+
+                                      }
+                                      break;
+                                      case "PIEAS":{
+                                        x = '15%';
+                                        y = '25%';
+                                        z = '60%';
+
+                                      }
+                                      break;
                                     }
                                     MATPERCENTAGE = x;
                                     FSCPERCENTAGE = y;
                                     TESTPERCENTAGE = z;
-                                    if (newValue == "CUSTOM"){
+                                    if (newValue == "OTHER"){
                                       editable = true;
                                     }
                                     callback(x,y,z,editable);
@@ -306,7 +362,7 @@ class _NewLayOutState extends State<NewLayOut> {
                                     testtype = dropDownValue;
                                   });
                                 },
-                                items: <String>['MCAT','ECAT','NET','CUSTOM'].map<DropdownMenuItem<String>>((String val) {
+                                items: <String>['MDCAT','ECAT','NET','UET','GIKI','ETEA MEDICAL','ETEA ENGINEERING','COMSATS','GCU LAHORE','PUCIT','QAU','PIEAS','OTHER'].map<DropdownMenuItem<String>>((String val) {
                                   return DropdownMenuItem<String>(
                                     value: val,
                                     child: Text(val,style: GoogleFonts.roboto(color: Colors.black),),

@@ -102,12 +102,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 30.0),
                             Text(
-                              'Procedure',
+                              'How It Works',
                               style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontSize: 20,fontWeight: FontWeight.bold),
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'You need to select test type and enter required marks, rest is handeled by the app',
+                              'You need to select test type and enter required marks, rest is handled by the app',
                               style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontSize: 16),
                             ),
                           ],
@@ -134,7 +134,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'We hope that you find this app helpful.It is an honor for us to help students like you, please visit www.preparehow.com for more information. Best of Luck!',
+                              'We hope that you find this app helpful.It is an honor for us to help students like you, please visit www.preparehow.com for more information. Best of luck!',
                               style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontSize: 16),
                             ),
                           ],

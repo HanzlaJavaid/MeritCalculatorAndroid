@@ -13,21 +13,31 @@ class infoShow extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset('assets/images/logo.png'),
+              Image.asset('assets/images/logo.png',width: 160, height: 160,),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text("Who We Are?",style:GoogleFonts.roboto(color: Color(0xff73924F),fontSize: 20,fontWeight: FontWeight.bold),),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 16,right: 16),
-                child: Text("PrepareHOW came about from a simple ambition of making educational opportunities accessible for all. The founder of this startup, Khurshid Amin, created a purpose out of his own educational struggles by setting an aim of helping the students get equal opportunity to prepare for entrance exams and have a chance to compete in the world.",style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontSize: 16),),
+                child: Text("PrepareHOW is an App and Web-Based Platform to guide and prepare students for admission tests like NUST, ECAT, ETEA, NUMS, MDCAT, GIKI and all other entry tests in Pakistan. The platform is helping millions of students through Web, App and Social Media Platforms to help students prepare for tests. Our aim is to provide simple, innovative, affordable and accessible education and guidance to student that are at a very crucial stage of deciding their future.",style: GoogleFonts.roboto(color: Color(0xFF6A6A6A),fontSize: 16),),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text("Download From Playstore",style:GoogleFonts.roboto(color: Color(0xff73924F),fontSize: 20,fontWeight: FontWeight.bold),),
+              ),
+              GestureDetector(
+                onTap:(){
+                  _launchURL('https://play.google.com/store/apps/details?id=com.preparehow.entry.test&hl=e');
+                },
+                child:Image.asset('assets/images/play.png') ,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text("Find Us Here",style:GoogleFonts.roboto(color: Color(0xff73924F),fontSize: 20,fontWeight: FontWeight.bold),),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(50,10,50,0),
+                padding: const EdgeInsets.fromLTRB(100,8.0,100,0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,15 +49,6 @@ class infoShow extends StatelessWidget {
                           _launchURL('https://www.preparehow.com/');
                         },
                         child:Image.asset('assets/images/globe.png') ,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 16),
-                      child: GestureDetector(
-                        onTap:(){
-                          _launchURL('https://www.instagram.com/prepare.how');
-                        },
-                        child:Image.asset('assets/images/ins.png'),
                       ),
                     ),
                     Padding(

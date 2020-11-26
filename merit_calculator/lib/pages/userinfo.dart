@@ -38,6 +38,11 @@ class _UserInfoState extends State<UserInfo> {
                     },
                     keyboardType: TextInputType.name,
                     decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(3),
+                        borderSide: BorderSide(
+                            color: Colors.green
+                        ),),
                       hintText: "Your name here",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5),
@@ -53,12 +58,18 @@ class _UserInfoState extends State<UserInfo> {
                   alignment: Alignment.topCenter,
                   width: 300,
                   child: TextField(
+
                     controller: contactnumber,
                     onChanged: (num){
                       num = contactnumber.text;
                     },
                     keyboardType: TextInputType.phone,
                     decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(3),
+                        borderSide: BorderSide(
+                            color: Colors.green
+                        ),),
                       hintText: "Your mobile number here",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(3),
